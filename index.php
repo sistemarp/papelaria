@@ -4,13 +4,40 @@
 	<title></title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="./_css/index.css">
+	<!-- linkando o estilo do slide de iagens gallery-->
+	<link rel="stylesheet" href="_css/gallery.theme.css">
+	<link rel="stylesheet" href="_css/gallery.min.css">
 </head>
 <body>
 	<?php include_once("./_paginas/menu.php") ?>
 
 	<div class="banner-horizontal-top">
-			
+		<!-- Codigo do gallery para rodar o slide -->
+		<div class="gallery autoplay items-3">
+		<div id="item-1" class="control-operator"></div>
+		<div id="item-2" class="control-operator"></div>
+		<div id="item-3" class="control-operator"></div>
+
+		<figure class="item">
+			<h1><img src="./_img/index/banner-horizontal-1.jpg" width='730' height='230'></h1>
+		</figure>
+
+		<figure class="item">
+			<h1><img src="./_img/index/banner-horizontal-2.jpg" width='730' height='230'></h1>
+		</figure>
+
+		<figure class="item">
+			<h1><img src="./_img/index/banner-horizontal-3.jpg" width='730' height='230'></h1>
+		</figure>
+
+		<div class="controls">
+			<a href="#item-1" class="control-button">•</a>
+			<a href="#item-2" class="control-button">•</a>
+			<a href="#item-3" class="control-button">•</a>
 		</div>
+		</div>	
+		<!-- Fim codigo gallery -->		
+	</div>
 
 	<section class="container">
 

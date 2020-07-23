@@ -1,3 +1,17 @@
+<?php 
+	include_once("./_mysql/conect.php");
+
+	$db = new startDB();
+
+	$db_resp = $db->start();
+
+	if($db_resp["db_Status"] == true){
+		var_dump($db_resp["db_error_info"]);
+	}else{
+		echo $db_resp["db_Mensagen"];
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +26,7 @@
 
 	<section class='container'>
 		
-		<form class='fLogin'>
+		<form class='fLogin' method='POST' action='login.php'>
 			<span id='idEntrar'>ENTRAR</span>
 			<input id='idLogin' type="email" name="login" placeholder='Login: ' required='required'>
 			<input id='idPass' type="password" name="senha" placeholder='Senha: ' required='required' minlength='4' maxlength='12'>

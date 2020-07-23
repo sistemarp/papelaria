@@ -4,6 +4,12 @@
 		padding: 0px;
 		box-sizing: border-box;
 	}
+
+	:root{
+		--color-bg-menu: rgba(242, 160, 182, 0.9);
+		--color-button-link: rgba(0, 0, 0, 0.5);
+		--color-button-whats: rgba(0, 0, 0, 0.2);
+	}
 	
 	.navMenu{
 		display: flex;
@@ -12,7 +18,7 @@
 		height: 70px;
 
 		/* Estilizando a cor da barra do menu */
-		background: #FEDFE7;
+		background: var(--color-bg-menu);
 	}
 
 	.menu{
@@ -45,7 +51,7 @@
 		display: inline-block;
 		text-decoration: none;
 
-		color: rgba(88, 111, 83, 0.5);
+		color: var(--color-button-link);
 	}.links :hover::after {
  		width: 100%;
 
@@ -54,7 +60,7 @@
 		width: 0px;
 		height: 2px;
 		display: block;
-		background: rgba(88, 111, 83, 0.5);
+		background: var(--color-button-link);
 		transition: 500ms;
 	}
 
@@ -74,7 +80,7 @@
 		outline-style: none;
 
 		/*Colocando cor no botao*/
-		background: rgba(0, 0, 0, 0.3);
+		background: var(--color-button-whats);
 		box-shadow: 1px 1px 2px black;
 		border-radius: 10px;
 		border: none;
