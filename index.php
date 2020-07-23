@@ -13,7 +13,6 @@
 		</div>
 
 	<section class="container">
-		<p>Paragrafo do linux</p>
 
 		<div class="icon-produtos">
 			<div class="produto">
@@ -29,7 +28,7 @@
 			<div class="produto-center">
 				<div class="border-icon-center"><img class="iconPDT2" src="./_img/index/camisa.svg"></div>
 				<div class="pdt-center-desc">
-					<img class='img_pdt' src="./_img/index/pdt1.png">
+					<img class='img_pdt' src="./_img/index/pdt2.png">
 					<span>Desde 2010 o mercado de personalizados não para de crescer. Por isso, ele se tronou, sem dúvidas, um investimento de retorno garantido. Isso claro, se tiver comprometimento com seu cliente e qualidade em seus produtos.</span>
 					<button class="continuar" id='pdt1'><span hidden="hide">Continuar</span></button>					
 				</div>

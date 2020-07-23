@@ -111,12 +111,12 @@
 		<img src="./_img/index/logo.svg">
 
 		<div class="links">
-			<li><a href="">Home</a></li>
+			<li><a href="index.php">Home</a></li>
 			<li><a href="">Produtos</a></li>
 			<li><a href="">Quem Somos</a></li>
 			<li><a href="">Orçamento</a></li>
 			<li><a href="">Contato</a></li>
-			<li><a href="">Entrar</a></li>
+			<li><a href="login.php">Entrar</a></li>
 		</div>
 
 		<button id="whats" class="btWaths">(45) 9 9953-0893</button>
