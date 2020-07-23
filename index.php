@@ -13,6 +13,7 @@
 		</div>
 
 	<section class="container">
+		<p>Paragrafo do linux</p>
 
 		<div class="icon-produtos">
 			<div class="produto">
