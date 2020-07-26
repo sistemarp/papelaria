@@ -56,10 +56,23 @@ html,body{
 }#entrar{
 	position: absolute;
 	width: 50%;
-	top: 220px;
+	top: 215px;
 	left: 125px;
 	padding-left: 0px;
 
+}#cadastro{
+	position: absolute;
+	top: 255px;
+	left: 140px;
+
+
+	color: #000000;
+}#esqueceu{
+	position: absolute;
+	top: 255px;
+	left: 230px;
+
+	color: #000000;
 }#idEntrar{
 	position: absolute;
 	top: 70px;

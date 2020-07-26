@@ -1,17 +1,3 @@
-<?php 
-	include_once("./_mysql/conect.php");
-
-	$db = new startDB();
-
-	$db_resp = $db->start();
-
-	if($db_resp["db_Status"] == true){
-		var_dump($db_resp["db_error_info"]);
-	}else{
-		echo $db_resp["db_Mensagen"];
-	}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,11 +12,13 @@
 
 	<section class='container'>
 		
-		<form class='fLogin' method='POST' action='login.php'>
+		<form class='fLogin'id='form_login'>
 			<span id='idEntrar'>ENTRAR</span>
 			<input id='idLogin' type="email" name="login" placeholder='Login: ' required='required'>
 			<input id='idPass' type="password" name="senha" placeholder='Senha: ' required='required' minlength='4' maxlength='12'>
 			<button id='entrar'>LOGIN</button>
+			<a id='cadastro' href="cadastro.php">Cadastre-se</a>
+			<a id='esqueceu' href="esqueceu_senha.php">Esqueceu sua senha?</a>
 		</form>
 
 	</section>
@@ -38,4 +26,6 @@
 	<?php include_once("./_paginas/rodape.php"); ?>
 
 </body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+	<script src="./_java/index/index.js"></script>
 </html>
