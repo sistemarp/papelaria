@@ -10,9 +10,9 @@
 
 	<?php include_once("./_paginas/menu.php"); ?>
 
-	<section class='container'>
-		
+	<section class='container' id='cnt'>		
 		<form class='fLogin'id='form_login'>
+			<div id='errors'></div>
 			<span id='idEntrar'>ENTRAR</span>
 			<input id='idLogin' type="email" name="login" placeholder='Login: ' required='required'>
 			<input id='idPass' type="password" name="senha" placeholder='Senha: ' required='required' minlength='4' maxlength='12'>

@@ -108,6 +108,17 @@
 		box-shadow: 1px 1px 2px black;
 	}
 
+	.drop ul{
+		position: absolute;
+		background-color: var(--color-bg-menu);
+		display:none;
+		border-radius: 7px;
+	}.links li:hover ul, .menu li.over ul{
+		z-index: 1;
+		display:block;
+	}.drop ul li{
+		margin: 10px;
+	}
 
 
 </style>
@@ -122,7 +133,21 @@
 			<li><a href="">Quem Somos</a></li>
 			<li><a href="">Orçamento</a></li>
 			<li><a href="">Contato</a></li>
-			<li><a href="login.php">Entrar</a></li>
+			<?php 
+				session_start();
+				if(isset($_SESSION["user_session_token"])){
+					echo "
+					<li class='drop'><a href='#'>".$_SESSION['user_first_name']."</a>
+					<ul>
+						<li><a href='_paginas/user_config.php'>Configurações</a></li>
+						<li><a href='_paginas/logout.php'>Logout</a>
+					</ul>					
+					</li>";
+				}else{
+					echo '<li><a href="login.php">Entrar</a></li>';
+				}
+			
+			?>
 		</div>
 
 		<button id="whats" class="btWaths">(45) 9 9953-0893</button>

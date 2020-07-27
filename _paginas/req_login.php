@@ -3,7 +3,6 @@
     if(isset($_POST["status"])){
 
         include_once("../_mysql/conect.php");
-        include_once("sessions.php");
 
         $banco = new startDB();
         $start = $banco->start();
@@ -19,12 +18,23 @@
             $query->execute();
 
             if($query->rowCount() > 0){
+                include_once("sessions.php");
+
+                $user_db = $query->fetch();                
                 $sessao = new configSession();
-                $resp_session = $sessao->start($query->fetch());
-                $resp_session;
-                echo $_SESSION["user_session_token"];
+
+                if($sessao->insertSession($user_db)){
+                    $resp_start = $sessao->start($user_db);
+                    $resp["status"] = true;
+                    $resp["mensagen"] = "Sejá bem vindo ".$_SESSION["user_first_name"];
+                }else{
+                    $resp["status"] = false;
+                    $resp["mensagen"] = "Usuario já está logando em outro aparelho! <br><a href='_paginas/logout.php'>Clique Aqui</a> Para desloga-lo";
+                }
+                echo json_encode($resp);                
             }else{
-                echo false;
+                $resp["status"] = false;
+                echo $resp;
             }
         }
     }else{

@@ -77,5 +77,5 @@
 
 	<?php include_once("./_paginas/rodape.php") ?>
 </body>
-<script type='text/javascript' src='./_java/index.js'></script>
+<script type='text/javascript' src='./_java/index/index.js'></script>
 </html>

@@ -5,6 +5,9 @@ document.getElementById("entrar").addEventListener("click", (event) => {
         var inpLogin = document.getElementById("idLogin");
         var inpPassw = document.getElementById("idPass");
 
+        var errors = document.getElementById("errors");
+        errors.innerHTML = '';
+
         $.ajax({
             url: "_paginas/req_login.php",
             type: "POST",
@@ -13,7 +16,20 @@ document.getElementById("entrar").addEventListener("click", (event) => {
                 txt_login: inpLogin.value,
                 txt_passw: inpPassw.value
             },success: (res) =>{
-                console.log(res);
+                var dados = jQuery.parseJSON(res);
+                if(!dados["status"]){
+                    $.ajax({
+                        url: "_paginas/msg_erro.php",
+                        type: "POST",
+                        data:{
+                            msg_error: dados["mensagen"]
+                        }, success: (res) => {
+                            errors.innerHTML = res;                            
+                        }
+                    })
+                }else{
+                    window.location = "index.php";
+                }
             }
         })
     }else{
